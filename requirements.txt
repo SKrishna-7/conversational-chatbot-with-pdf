@@ -8,3 +8,4 @@ langchain_huggingface
 chromadb
 python-dotenv
 langchain-text-splitters
+pysqlite3
