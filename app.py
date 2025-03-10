@@ -21,7 +21,11 @@ load_dotenv()
 os.environ['HUGGING_FACE_TOKEN']=os.getenv('HUGGING_FACE_TOKEN')
 embeddings=HuggingFaceEmbeddings(model_name='all-MiniLM-L6-v2')
 
+import sys
 
+import pysqlite3
+
+sys.modules["sqlite3"] = pysqlite3
 
 
 st.set_page_config(page_title="Conversational RAG with PDF Uploads & Chat History", layout="wide")
