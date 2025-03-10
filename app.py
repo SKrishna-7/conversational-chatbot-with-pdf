@@ -24,32 +24,28 @@ embeddings=HuggingFaceEmbeddings(model_name='all-MiniLM-L6-v2')
 
 
 
-
 st.set_page_config(page_title="Conversational RAG with PDF Uploads & Chat History", layout="wide")
 st.header("Conversational RAG With PDF uploads and Chat History")
 
 with st.sidebar:
-    api_key1=st.text_input('Provied Groq API key',type='password')
+    api_key=st.text_input('Provied Groq API key',type='password')
 
     session_id=st.text_input('Session ID',value='default_session')
     uploaded_files=st.file_uploader('Upload Document',accept_multiple_files=True)
 
 
 
-api_key=os.getenv('GROQ_API')
+# api_key=os.getenv('GROQ_API')
 
 if api_key:
     model=ChatGroq(
         groq_api_key=api_key,model_name='Gemma2-9b-It')
 
-    # Chat Interface
-    # session_id=st.text_input("Session ID ",value='default_session')
-    #Manage the Chat history
 
     if 'store' not in st.session_state:
         st.session_state.store={}
 
-    # uploaded_files=st.file_uploader("Choose a PDF file",type='pdf',accept_multiple_files=True)
+    
 
     #processing the file
 
