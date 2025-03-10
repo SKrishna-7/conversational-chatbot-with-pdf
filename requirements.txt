@@ -1,4 +1,3 @@
---no-cache-dir
 
 langchain
 python-dotenv
@@ -6,16 +5,11 @@ langchain-community
 pypdf
 pymupdf
 langchain-text-splitters
-chromadb
 langchain_huggingface
 langchain_chroma
 langchain-groq
-mysql-connector-python
-SQLAlchemy
-validators==0.28.1
 huggingface_hub
 streamlit
-uvicorn
 langserve[all]
 pysqlite3-binary
 
